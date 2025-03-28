@@ -92,6 +92,12 @@ This is the place for you to write reflections:
 
 - Using models without separation can cause issues like bloated classes, tight coupling, and difficulty in testing. It can also lead to a cluttered and less maintainable codebase, as changes in one model can affect others, making it difficult to isolate components and rely on external services. Additionally, it violates the Single Responsibility Principle (SRP) by handling data representation, storage logic, and business rules within the same model.
 
-- 
+- Postman is a powerful tool for testing web endpoints and ensuring responses match expectations. It allows developers to send HTTP requests without writing code, making debugging faster and more efficient. Postman supports various HTTP methods, allows easy customization of headers, parameters, and request bodies, saves requests and responses, manages authentication, handles cookies, and automates tests. Its built-in features for API documentation and sharing collections streamline development workflows.
 
 #### Reflection Publisher-3
+
+- This tutorial uses the push model, which sends real-time updates to subscribers without requiring them to request information. The implementation is handled in the notify function, where the publisher pushes notifications to all registered subscribers. This model is useful for instant updates in live feeds, messaging systems, or event-driven architectures, as it reduces requests and improves responsiveness.
+
+- The pull model simplifies data retrieval by allowing subscribers to control data retrieval, but can increase CPU usage and latency, while the push model ensures immediate updates but may face delays due to processing backlogs.
+
+- My implementation utilizes multi-threading, enabling the main thread to continue processing requests while notifications are sent in the background, enhancing system responsiveness and resilience.
