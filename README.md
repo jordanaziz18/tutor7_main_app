@@ -80,12 +80,18 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
-    - Declaring Subscriber as an interface type (or trait in Rust) in the Observer pattern guarantees extensibility and conformity to SOLID principles.  However, since there is only one type of Subscriber in view and no immediate plans to introduce any others, BambangShop will only require a single Model struct.
+- Declaring Subscriber as an interface type (or trait in Rust) in the Observer pattern guarantees extensibility and conformity to SOLID principles.  However, since there is only one type of Subscriber in view and no immediate plans to introduce any others, BambangShop will only require a single Model struct.
 
-    - DashMap's use in this instance is warranted because it gives subscribers a clear, effective map from product IDs. DashMap offers constant-time access, which enhances performance, particularly as data accumulates, in contrast to Vec, where lookups would take linear searches. It is more suited for multithreaded apps like BambangShop because it also allows safe multithreaded access. Furthermore, there is no data fragmentation when using a Singleton that provides a central Subscriber map. DashMap is the best option for performance and scalability, although a Vec would work well for small-scale use cases.
+- DashMap's use in this instance is warranted because it gives subscribers a clear, effective map from product IDs. DashMap offers constant-time access, which enhances performance, particularly as data accumulates, in contrast to Vec, where lookups would take linear searches. It is more suited for multithreaded apps like BambangShop because it also allows safe multithreaded access. Furthermore, there is no data fragmentation when using a Singleton that provides a central Subscriber map. DashMap is the best option for performance and scalability, although a Vec would work well for small-scale use cases.
 
-    - 
+- DashMap and Singleton patterns are complementary in BambangShop, providing centralized instances and thread safety. Singleton prevents unnecessary cloning but doesn't handle concurrent access issues, while DashMap ensures safe concurrent access without manual synchronization.
 
 #### Reflection Publisher-2
+
+- Separating Service and Repository from the Model benefits the Single Responsibility Principle by ensuring the model represents data, the repository handles data access, and the service manages business logic. This separation enhances maintainability, modularity, testability, flexibility, and promotes a cleaner architecture with well-defined boundaries. It reduces dependencies between layers and makes the application more scalable. This approach improves code readability, simplifies maintenance, and allows development teams to work on different layers without conflicts, leading to a more efficient and structured software development process.
+
+- Using models without separation can cause issues like bloated classes, tight coupling, and difficulty in testing. It can also lead to a cluttered and less maintainable codebase, as changes in one model can affect others, making it difficult to isolate components and rely on external services. Additionally, it violates the Single Responsibility Principle (SRP) by handling data representation, storage logic, and business rules within the same model.
+
+- 
 
 #### Reflection Publisher-3
