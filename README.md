@@ -1,3 +1,4 @@
+
 # BambangShop Publisher App
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
 
@@ -37,9 +38,10 @@ You can install Postman via this website: https://www.postman.com/downloads/
 ## How to Run in Development Environment
 1.  Set up environment variables first by creating `.env` file.
     Here is the example of `.env` file:
-    ```bash
+```sh
     APP_INSTANCE_ROOT_URL="http://localhost:8000"
-    ```
+```
+
     Here are the details of each environment variable:
     | variable              | type   | description                                                |
     |-----------------------|--------|------------------------------------------------------------|
@@ -77,7 +79,9 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+    
 
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
+
