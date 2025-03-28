@@ -79,9 +79,13 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
-    
+
+    - Declaring Subscriber as an interface type (or trait in Rust) in the Observer pattern guarantees extensibility and conformity to SOLID principles.  However, since there is only one type of Subscriber in view and no immediate plans to introduce any others, BambangShop will only require a single Model struct.
+
+    - DashMap's use in this instance is warranted because it gives subscribers a clear, effective map from product IDs. DashMap offers constant-time access, which enhances performance, particularly as data accumulates, in contrast to Vec, where lookups would take linear searches. It is more suited for multithreaded apps like BambangShop because it also allows safe multithreaded access. Furthermore, there is no data fragmentation when using a Singleton that provides a central Subscriber map. DashMap is the best option for performance and scalability, although a Vec would work well for small-scale use cases.
+
+    - 
 
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3
-
